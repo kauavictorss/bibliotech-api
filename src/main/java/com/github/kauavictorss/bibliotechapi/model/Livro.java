@@ -1,9 +1,14 @@
 package com.github.kauavictorss.bibliotechapi.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.UUID;
 
+@Getter
+@Setter
 public class Livro {
-    private UUID uuid;
+    private UUID id;
     private String isbn;
     private String titulo;
     private String autor;
@@ -13,47 +18,10 @@ public class Livro {
     }
 
     public Livro(String isbn, String titulo, String autor, Integer anoPublicacao) {
-        this.uuid = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
     }
-
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public Integer getAnoPublicacao() {
-        return anoPublicacao;
-    }
-
-    public void setAnoPublicacao(Integer anoPublicacao) {
-        this.anoPublicacao = anoPublicacao;
-    }
-
 }
